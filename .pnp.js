@@ -66,6 +66,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT",
         }]
       ]],
+      ["lodash", [
+        ["npm:4.17.19", {
+          "packageLocation": "./.yarn/cache/lodash-npm-4.17.19-fa87a8e838-ff2b7a95f0.zip/node_modules/lodash/",
+          "packageDependencies": [
+            ["lodash", "npm:4.17.19"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["package-a", [
         ["workspace:packages/package-a", {
           "packageLocation": "./packages/package-a/",
@@ -88,7 +97,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["workspace:packages/package-c", {
           "packageLocation": "./packages/package-c/",
           "packageDependencies": [
-            ["package-c", "workspace:packages/package-c"]
+            ["package-c", "workspace:packages/package-c"],
+            ["lodash", "npm:4.17.19"]
           ],
           "linkType": "SOFT",
         }]

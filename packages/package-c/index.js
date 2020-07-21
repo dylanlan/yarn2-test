@@ -1,3 +1,5 @@
+const _ = require('lodash');
+
 module.exports.packageC = () => {
-    return 'Package C';
+    return _.trim('       Package C');
 };
