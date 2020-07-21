@@ -10,6 +10,7 @@
   "author": "Dylan Stankievech",
   "license": "ISC",
   "dependencies": {
-    "package-a": "1.0.0"
+    "package-a": "1.0.0",
+    "package-c": "1.0.0"
   }
 }

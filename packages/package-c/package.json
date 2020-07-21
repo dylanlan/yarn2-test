@@ -1,5 +1,5 @@
 {
-  "name": "service-b",
+  "name": "package-c",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,9 +8,5 @@
   },
   "keywords": [],
   "author": "Dylan Stankievech",
-  "license": "ISC",
-  "dependencies": {
-    "package-b": "1.0.0",
-    "package-c": "1.0.0"
-  }
+  "license": "ISC"
 }

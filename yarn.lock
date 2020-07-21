@@ -16,11 +16,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"package-c@1.0.0, package-c@workspace:packages/package-c":
+  version: 0.0.0-use.local
+  resolution: "package-c@workspace:packages/package-c"
+  languageName: unknown
+  linkType: soft
+
 "service-a@workspace:services/service-a":
   version: 0.0.0-use.local
   resolution: "service-a@workspace:services/service-a"
   dependencies:
     package-a: 1.0.0
+    package-c: 1.0.0
   languageName: unknown
   linkType: soft
 
@@ -29,6 +36,7 @@ __metadata:
   resolution: "service-b@workspace:services/service-b"
   dependencies:
     package-b: 1.0.0
+    package-c: 1.0.0
   languageName: unknown
   linkType: soft
 

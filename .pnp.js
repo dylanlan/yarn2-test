@@ -37,6 +37,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {
         "name": "package-b",
         "reference": "workspace:packages/package-b"
+      },
+      {
+        "name": "package-c",
+        "reference": "workspace:packages/package-c"
       }
     ],
     "enableTopLevelFallback": true,
@@ -44,6 +48,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "fallbackExclusionList": [
       ["package-a", ["workspace:packages/package-a"]],
       ["package-b", ["workspace:packages/package-b"]],
+      ["package-c", ["workspace:packages/package-c"]],
       ["service-a", ["workspace:services/service-a"]],
       ["service-b", ["workspace:services/service-b"]],
       ["yarn2-test", ["workspace:."]]
@@ -79,12 +84,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT",
         }]
       ]],
+      ["package-c", [
+        ["workspace:packages/package-c", {
+          "packageLocation": "./packages/package-c/",
+          "packageDependencies": [
+            ["package-c", "workspace:packages/package-c"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
       ["service-a", [
         ["workspace:services/service-a", {
           "packageLocation": "./services/service-a/",
           "packageDependencies": [
             ["service-a", "workspace:services/service-a"],
-            ["package-a", "workspace:packages/package-a"]
+            ["package-a", "workspace:packages/package-a"],
+            ["package-c", "workspace:packages/package-c"]
           ],
           "linkType": "SOFT",
         }]
@@ -94,7 +109,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./services/service-b/",
           "packageDependencies": [
             ["service-b", "workspace:services/service-b"],
-            ["package-b", "workspace:packages/package-b"]
+            ["package-b", "workspace:packages/package-b"],
+            ["package-c", "workspace:packages/package-c"]
           ],
           "linkType": "SOFT",
         }]
